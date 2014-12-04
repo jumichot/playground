@@ -6,10 +6,51 @@
   <script src="bower_components/d3/d3.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
-  <header>
-    hello
-  </header>
-  <footer>
-  </footer>
+  <svg class="chart"></svg>
+  <script>
+    d3.json("data/typing-data.json", function(error, json) {
+      console.log(json["us:auto"]["data"]);
+      var data = json["us:auto"]["data"]
+      var chart = d3.select(".chart");
+      var circle = chart.selectAll("circle").data(data);
+      var circleEnter = circle.enter().append("circle");
+      circleEnter.attr("cy", 60);
+      circleEnter.attr("cx", function(d, i) { return i * 100 + 30; });
+      circleEnter.attr("r", function(d) { return d.speed/10; });
+
+      var margin = {top: 30, right: 10, bottom: 30, left: 40};
+
+      // setup svg container: width and heigth
+      var width = 1000;
+      chart.attr("width",width);
+      var height = 500;
+      chart.attr("height",height);
+
+      // display axis
+      var minSpeed = d3.min(data, function(d){ return d.speed; });
+      var maxSpeed = d3.max(data, function(d){ return d.speed; });
+      var xRange = d3.scale.linear().range([margin.left, width - margin.right]).domain([0, data.length]);
+      var yRange = d3.scale.linear().range([height - margin.top, margin.bottom]).domain([minSpeed, maxSpeed]);
+
+      var vis = d3.select('.chart'),
+          xAxis = d3.svg.axis()
+            .scale(xRange)
+            .tickSize(5)
+            .tickSubdivide(true),
+          yAxis = d3.svg.axis()
+            .scale(yRange)
+            .tickSize(5)
+            .orient('left')
+            .tickSubdivide(true);
+          vis.append('svg:g')
+            .attr('class', 'x axis')
+            .attr('transform', 'translate(0,' + (height - margin.bottom) + ')')
+            .call(xAxis);
+          vis.append('svg:g')
+            .attr('class', 'y axis')
+            .attr('transform', 'translate(' + (margin.left) + ',0)')
+            .call(yAxis);
+    });
+  </script>
 </body>
 </html>
