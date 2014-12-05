@@ -1,11 +1,21 @@
-angular.module('flapperNews', []).controller('MainCtrl',[
-    '$scope', function($scope){
-      $scope.test = 'Hello world!';
-      $scope.posts = [
-        { title: 'post 1', upvotes: 5},
-        { title: 'post 1', upvotes: 3},
-        { title: 'post 2', upvotes: 5},
-        { title: 'post 1', upvotes: 5},
-        { title: 'post 1', upvotes: 4}
-      ];
-    }]);
+angular.module('flapperNews', []).factory('posts', [function(){
+  var o = {
+    posts: [{title: 'hello', link: '', upvotes: 0}]
+  };
+  return o;
+}]).controller('MainCtrl', ['$scope', 'posts', function($scope,posts){
+    $scope.test = 'Hello world!';
+    $scope.posts = posts.posts;
+
+    $scope.incrementUpvotes = function(post){
+      post.upvotes += 1;
+    }
+
+    $scope.addPost = function(){
+      if(!$scope.title || $scope.title === ''){ return; }
+      $scope.posts.push({title: $scope.title, link: $scope.link, upvotes: 0});
+      $scope.title = '';
+      $scope.link = '';
+    }
+  }
+]);
