@@ -1,9 +1,25 @@
-angular.module('flapperNews', []).factory('posts', [function(){
+angular.module('flapperNews', ['ui.router'])
+.config([
+'$stateProvider',
+'$urlRouterProvider',
+function($stateProvider,$urlRouterProvider){
+  // ui router
+  $stateProvider
+  .state('home', {
+    url:'/home',
+    templateUrl: '/home.html',
+    controller: 'MainCtrl'
+  });
+  // url by default
+  $urlRouterProvider.otherwise('home');
+}])
+.factory('posts', [function(){
   var o = {
     posts: [{title: 'hello', link: '', upvotes: 0}]
   };
   return o;
-}]).controller('MainCtrl', ['$scope', 'posts', function($scope,posts){
+}])
+.controller('MainCtrl', ['$scope', 'posts', function($scope,posts){
     $scope.test = 'Hello world!';
     $scope.posts = posts.posts;
 
