@@ -9,6 +9,11 @@ function($stateProvider,$urlRouterProvider){
     url:'/home',
     templateUrl: '/home.html',
     controller: 'MainCtrl'
+  })
+  .state('posts', {
+    url: '/posts/{id}',
+    templateUrl: '/posts.html',
+    controller: 'PostsCtrl'
   });
   // url by default
   $urlRouterProvider.otherwise('home');
@@ -18,6 +23,9 @@ function($stateProvider,$urlRouterProvider){
     posts: [{title: 'hello', link: '', upvotes: 0}]
   };
   return o;
+}])
+.controller('PostsCtrl', ['$scope', '$stateParams','posts', function($scope, $stateParams, posts){
+  $scope.post = posts.posts[$stateParams.id]
 }])
 .controller('MainCtrl', ['$scope', 'posts', function($scope,posts){
     $scope.test = 'Hello world!';
@@ -29,9 +37,12 @@ function($stateProvider,$urlRouterProvider){
 
     $scope.addPost = function(){
       if(!$scope.title || $scope.title === ''){ return; }
-      $scope.posts.push({title: $scope.title, link: $scope.link, upvotes: 0});
+      $scope.posts.push({title: $scope.title, link: $scope.link, upvotes: 0, comments: [
+          {author: 'Joe', body: 'Cool post!', upvotes: 0},
+          {author: 'Bob', body: 'Great idea but everything is wrong!', upvotes: 0}
+        ]});
       $scope.title = '';
       $scope.link = '';
     }
-  }
+}
 ]);
