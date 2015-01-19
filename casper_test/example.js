@@ -1,14 +1,17 @@
-var casper = require('casper').create();
-
+var casper = require('casper').create({
+    verbose: true,
+    logLevel: "debug",
+    waitTimeout: 30000
+});
 // Login on the homepage
 casper.start('http://www.monsieurdrive.com/', function(response) {
     console.log('Login on the homepage');
     // get title of the page
     this.echo(this.getTitle());
     this.fillSelectors('.search-zipcode form', {
-      'input[name="user[formatted_address]"]':  'Issy les Moulineaux',
-      'input[name="user[latitude]"]':           '48.8245306',
-      'input[name="user[longitude]"]':          '2.2743418999999676'
+      'input[name="user[formatted_address]"]':  'Nevers, France',
+      'input[name="user[latitude]"]':           '46.99089600000001',
+      'input[name="user[longitude]"]':          '3.162845000000061'
     }, true);
 });
 
@@ -119,28 +122,14 @@ casper.then(function(){
 });
 
 casper.then(function(){
-  casper.waitForPopup(/casinodrive/, function() {
+  casper.waitForPopup(/carrefour/, function() {
     this.wait(1000, function() {
       this.capture('step6_finnish.png');
     });
   });
   // IN POPUP
-  casper.withPopup(/casinodrive/, function() {
+  casper.withPopup(/carrefour/, function() {
     console.log("in popup:")
-    this.clickLabel('Me connecter / Créer mon compte', 'a');
-
-    casper.then(function(){
-      this.wait(1000, function() {
-        console.log("wait #id")
-        casper.waitForSelector('#identifiant-id', function success() {
-          casper.evaluate(function () {
-            $("#identifiant-id").val("clebruit@yahoo.fr")
-            $("#secure-id").val("clebruit@yahoo.fr")
-          });
-          this.clickLabel('Me connecter', 'button');
-        });
-      });
-    });
 
     this.wait(1000, function() {
       this.capture('step7_target_shop.png');
