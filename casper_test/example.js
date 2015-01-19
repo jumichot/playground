@@ -1,13 +1,19 @@
+log_step = function(msg) {
+  log_step.step = log_step.step || 0;
+  log_step.step = log_step.step + 1;
+  console.log("STEP " + log_step.step + " " + msg);
+  casper.capture('step' + log_step.step + '_'+ msg.replace(/\s+/g, '_') +'.png');
+}
+
 var casper = require('casper').create({
     verbose: true,
     logLevel: "debug",
     waitTimeout: 30000
 });
+
 // Login on the homepage
 casper.start('http://www.monsieurdrive.com/', function(response) {
-    console.log('Login on the homepage');
-    // get title of the page
-    this.echo(this.getTitle());
+    log_step("login on the homepage");
     this.fillSelectors('.search-zipcode form', {
       'input[name="user[formatted_address]"]':  'Nevers, France',
       'input[name="user[latitude]"]':           '46.99089600000001',
@@ -16,7 +22,11 @@ casper.start('http://www.monsieurdrive.com/', function(response) {
 });
 
 // Add a product
-casper.thenOpen('http://www.monsieurdrive.com/rayons/category-boissons/category-eaux', function() {
+casper.thenOpen('http://www.monsieurdrive.com', function() {
+    this.wait(1000, function() {
+      console.log('step 01 : addtocart');
+      this.capture('step01_addtocart.png');
+    });
   casper.waitForSelector('.addtocart', function success() {
       casper.click('.addtocart');
     },
