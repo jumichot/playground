@@ -1,0 +1,228 @@
+[36m[info][0m [phantom] Starting...
+[36m[info][0m [phantom] Running suite: 10 steps
+[32;1m[debug][0m [phantom] opening url: http://www.monsieurdrive.com/, HTTP GET
+[32;1m[debug][0m [phantom] Navigation requested: url=http://www.monsieurdrive.com/, type=Other, willNavigate=true, isMainFrame=true
+[32;1m[debug][0m [phantom] url changed to "http://www.monsieurdrive.com/"
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=http://dis.eu.criteo.com/dis/dis.aspx?p=16216&cb=80231725237&ref=&sc_r=1920x1080&sc_d=32, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Successfully injected Casper client-side utilities
+[36m[info][0m [phantom] Step anonymous 2/10 http://www.monsieurdrive.com/ (HTTP 200)
+====================================
+STEP 1 fill zipcode form on the homepage
+====================================
+[32;1m[debug][0m [phantom] Capturing page to /Users/ju/CODE/PLAYGROUND/casper_test/step1_fill_zipcode_form_on_the_homepage.png
+[36m[info][0m [phantom] Capture saved to /Users/ju/CODE/PLAYGROUND/casper_test/step1_fill_zipcode_form_on_the_homepage.png
+[36m[info][0m [remote] attempting to fetch form element from selector: '.search-zipcode form'
+[32;1m[debug][0m [remote] Set "user[formatted_address]" field value to Nevers, France
+[32;1m[debug][0m [remote] Set "user[latitude]" field value to 46.99089600000001
+[32;1m[debug][0m [remote] Set "user[longitude]" field value to 3.162845000000061
+[36m[info][0m [remote] submitting form to /rayons/default, HTTP GET
+[36m[info][0m [phantom] Step anonymous 2/10: done in 4330ms.
+[36m[info][0m [phantom] Step anonymous 3/10 http://www.monsieurdrive.com/ (HTTP 200)
+[36m[info][0m [phantom] Step anonymous 3/10: done in 4336ms.
+[32;1m[debug][0m [phantom] Navigation requested: url=http://www.monsieurdrive.com/rayons/default?utf8=✓&user[formatted_address]=&user[street_number]=&user[route]=&user[zipcode]=&user[city]=&user[country]=&user[latitude]=46.99089600000001&user[longitude]=3.162845000000061, type=FormSubmitted, willNavigate=true, isMainFrame=true
+[32;1m[debug][0m [phantom] Navigation requested: url=http://www.monsieurdrive.com/rayons/category-boissons/category-eaux, type=FormSubmitted, willNavigate=true, isMainFrame=true
+[32;1m[debug][0m [phantom] url changed to "http://www.monsieurdrive.com/rayons/category-boissons/category-eaux"
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=http://static.ak.facebook.com/connect/xd_arbiter/7r8gQb8MIqE.js?version=41#channel=f2e55ac3bc&origin=http://www.monsieurdrive.com, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=https://s-static.ak.facebook.com/connect/xd_arbiter/7r8gQb8MIqE.js?version=41#channel=f2e55ac3bc&origin=http://www.monsieurdrive.com, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=http://dis.eu.criteo.com/dis/dis.aspx?p=16216&cb=6129641248&ref=http://www.monsieurdrive.com/&sc_r=1920x1080&sc_d=32, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Successfully injected Casper client-side utilities
+[36m[info][0m [phantom] Step _step 4/11 http://www.monsieurdrive.com/rayons/category-boissons/category-eaux (HTTP 200)
+[36m[info][0m [phantom] Step _step 4/11: done in 8553ms.
+[32;1m[debug][0m [phantom] Navigation requested: url=http://www.facebook.com/v2.0/plugins/login_button.php?app_id=333754006727439&auth_type=rerequest&auto_logout_link=false&channel=http://static.ak.facebook.com/connect/xd_arbiter/7r8gQb8MIqE.js?version=41#cb=f21856810c&domain=www.monsieurdrive.com&origin=http%3A%2F%2Fwww.monsieurdrive.com%2Ff2e55ac3bc&relation=parent.parent&locale=fr_FR&max_rows=3&scope=public_profile,email&sdk=joey&show_faces=false&size=large, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=http://www.facebook.com/v2.0/plugins/login_button.php?app_id=333754006727439&auth_type=rerequest&auto_logout_link=false&channel=http://static.ak.facebook.com/connect/xd_arbiter/7r8gQb8MIqE.js?version=41#cb=fc4d9d418&domain=www.monsieurdrive.com&origin=http%3A%2F%2Fwww.monsieurdrive.com%2Ff2e55ac3bc&relation=parent.parent&locale=fr_FR&max_rows=3&scope=public_profile,email&sdk=joey&show_faces=false&size=large, type=Other, willNavigate=true, isMainFrame=false
+[36m[info][0m [phantom] waitFor() finished in 55ms.
+[32;1m[debug][0m [phantom] Navigation requested: url=https://www.facebook.com/v2.0/plugins/login_button.php?app_id=333754006727439&auth_type=rerequest&auto_logout_link=false&channel=http://static.ak.facebook.com/connect/xd_arbiter/7r8gQb8MIqE.js?version=41#cb=f21856810c&domain=www.monsieurdrive.com&origin=http%3A%2F%2Fwww.monsieurdrive.com%2Ff2e55ac3bc&relation=parent.parent&locale=fr_FR&max_rows=3&scope=public_profile,email&sdk=joey&show_faces=false&size=large, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=https://www.facebook.com/v2.0/plugins/login_button.php?app_id=333754006727439&auth_type=rerequest&auto_logout_link=false&channel=http://static.ak.facebook.com/connect/xd_arbiter/7r8gQb8MIqE.js?version=41#cb=fc4d9d418&domain=www.monsieurdrive.com&origin=http%3A%2F%2Fwww.monsieurdrive.com%2Ff2e55ac3bc&relation=parent.parent&locale=fr_FR&max_rows=3&scope=public_profile,email&sdk=joey&show_faces=false&size=large, type=Other, willNavigate=true, isMainFrame=false
+[36m[info][0m [phantom] Step success 5/12 http://www.monsieurdrive.com/rayons/category-boissons/category-eaux (HTTP 200)
+====================================
+STEP 2 sign in with the modal
+====================================
+[32;1m[debug][0m [phantom] Capturing page to /Users/ju/CODE/PLAYGROUND/casper_test/step2_sign_in_with_the_modal.png
+[36m[info][0m [phantom] Capture saved to /Users/ju/CODE/PLAYGROUND/casper_test/step2_sign_in_with_the_modal.png
+[36m[info][0m [phantom] Step success 5/12: done in 10145ms.
+[36m[info][0m [phantom] Step anonymous 6/12 http://www.monsieurdrive.com/rayons/category-boissons/category-eaux (HTTP 200)
+[36m[info][0m [phantom] Step anonymous 6/12: done in 10152ms.
+[36m[info][0m [phantom] Step _step 7/13 http://www.monsieurdrive.com/rayons/category-boissons/category-eaux (HTTP 200)
+[36m[info][0m [phantom] Step _step 7/13: done in 10167ms.
+[36m[info][0m [phantom] waitFor() finished in 41ms.
+[36m[info][0m [phantom] Step success 8/14 http://www.monsieurdrive.com/rayons/category-boissons/category-eaux (HTTP 200)
+[32;1m[debug][0m [phantom] Mouse event 'mousedown' on selector: .js-cp_modal_submit_link
+[32;1m[debug][0m [phantom] Mouse event 'mouseup' on selector: .js-cp_modal_submit_link
+[32;1m[debug][0m [phantom] Mouse event 'click' on selector: .js-cp_modal_submit_link
+====================================
+STEP 3 submit the signin modal
+====================================
+[32;1m[debug][0m [phantom] Capturing page to /Users/ju/CODE/PLAYGROUND/casper_test/step3_submit_the_signin_modal.png
+[36m[info][0m [phantom] Capture saved to /Users/ju/CODE/PLAYGROUND/casper_test/step3_submit_the_signin_modal.png
+[36m[info][0m [phantom] Step success 8/14: done in 11046ms.
+[36m[info][0m [phantom] Step anonymous 9/14 http://www.monsieurdrive.com/rayons/category-boissons/category-eaux (HTTP 200)
+[36m[info][0m [phantom] Step anonymous 9/14: done in 11223ms.
+[36m[info][0m [phantom] Step _step 10/15 http://www.monsieurdrive.com/rayons/category-boissons/category-eaux (HTTP 200)
+[36m[info][0m [phantom] Step _step 10/15: done in 11241ms.
+[36m[info][0m [phantom] waitFor() finished in 40ms.
+[36m[info][0m [phantom] Step success 11/16 http://www.monsieurdrive.com/rayons/category-boissons/category-eaux (HTTP 200)
+====================================
+STEP 4 add a product to the cart
+====================================
+[32;1m[debug][0m [phantom] Capturing page to /Users/ju/CODE/PLAYGROUND/casper_test/step4_add_a_product_to_the_cart.png
+[36m[info][0m [phantom] Capture saved to /Users/ju/CODE/PLAYGROUND/casper_test/step4_add_a_product_to_the_cart.png
+[32;1m[debug][0m [phantom] Mouse event 'mousedown' on selector: .addtocart[data-product-id="521d2472b30f7cad8032fdc0"]
+[32;1m[debug][0m [phantom] Mouse event 'mouseup' on selector: .addtocart[data-product-id="521d2472b30f7cad8032fdc0"]
+[32;1m[debug][0m [phantom] Mouse event 'click' on selector: .addtocart[data-product-id="521d2472b30f7cad8032fdc0"]
+[36m[info][0m [phantom] Step success 11/16: done in 12115ms.
+[36m[info][0m [phantom] Step anonymous 12/16 http://www.monsieurdrive.com/rayons/category-boissons/category-eaux (HTTP 200)
+[36m[info][0m [phantom] Step anonymous 12/16: done in 12127ms.
+[32;1m[debug][0m [phantom] Navigation requested: url=http://www.monsieurdrive.com/rayons/category-boissons/category-eaux, type=Other, willNavigate=true, isMainFrame=true
+[32;1m[debug][0m [phantom] url changed to "http://www.monsieurdrive.com/rayons/category-boissons/category-eaux"
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=http://static.ak.facebook.com/connect/xd_arbiter/7r8gQb8MIqE.js?version=41#channel=f3b6a21e1&origin=http://www.monsieurdrive.com, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=https://s-static.ak.facebook.com/connect/xd_arbiter/7r8gQb8MIqE.js?version=41#channel=f3b6a21e1&origin=http://www.monsieurdrive.com, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=http://dis.eu.criteo.com/dis/dis.aspx?p=16216&cb=73739390982&ref=http://www.monsieurdrive.com/rayons/category-boissons/category-eaux&sc_r=1920x1080&sc_d=32, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Successfully injected Casper client-side utilities
+[36m[info][0m [phantom] Step _step 13/17 http://www.monsieurdrive.com/rayons/category-boissons/category-eaux (HTTP 200)
+[36m[info][0m [phantom] Step _step 13/17: done in 15998ms.
+[36m[info][0m [phantom] waitFor() finished in 40ms.
+[36m[info][0m [phantom] Step success 14/18 http://www.monsieurdrive.com/rayons/category-boissons/category-eaux (HTTP 200)
+[32;1m[debug][0m [phantom] Mouse event 'mousedown' on selector: #checkout
+[32;1m[debug][0m [phantom] Mouse event 'mouseup' on selector: #checkout
+[32;1m[debug][0m [phantom] Mouse event 'click' on selector: #checkout
+[32;1m[debug][0m [phantom] Navigation requested: url=http://www.monsieurdrive.com/cart, type=LinkClicked, willNavigate=true, isMainFrame=true
+====================================
+STEP 5 go to cart page
+====================================
+[32;1m[debug][0m [phantom] Capturing page to /Users/ju/CODE/PLAYGROUND/casper_test/step5_go_to_cart_page.png
+[36m[info][0m [phantom] Capture saved to /Users/ju/CODE/PLAYGROUND/casper_test/step5_go_to_cart_page.png
+[36m[info][0m [phantom] Step success 14/18: done in 16722ms.
+[32;1m[debug][0m [phantom] url changed to "http://www.monsieurdrive.com/cart"
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=http://static.ak.facebook.com/connect/xd_arbiter/7r8gQb8MIqE.js?version=41#channel=f11e998188&origin=http://www.monsieurdrive.com, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=https://s-static.ak.facebook.com/connect/xd_arbiter/7r8gQb8MIqE.js?version=41#channel=f11e998188&origin=http://www.monsieurdrive.com, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=http://dis.eu.criteo.com/dis/dis.aspx?p=16216&cb=87046995665&ref=http://www.monsieurdrive.com/rayons/category-boissons/category-eaux&sc_r=1920x1080&sc_d=32, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Successfully injected Casper client-side utilities
+[36m[info][0m [phantom] Step anonymous 15/18 http://www.monsieurdrive.com/cart (HTTP 200)
+[36m[info][0m [phantom] Step anonymous 15/18: done in 19798ms.
+[36m[info][0m [phantom] Step _step 16/19 http://www.monsieurdrive.com/cart (HTTP 200)
+[36m[info][0m [phantom] Step _step 16/19: done in 19821ms.
+[36m[info][0m [phantom] waitFor() finished in 44ms.
+[36m[info][0m [phantom] Step success 17/20 http://www.monsieurdrive.com/cart (HTTP 200)
+[32;1m[debug][0m [phantom] Mouse event 'mousedown' on selector: .btn-checkout
+[32;1m[debug][0m [phantom] Mouse event 'mouseup' on selector: .btn-checkout
+[32;1m[debug][0m [phantom] Mouse event 'click' on selector: .btn-checkout
+[32;1m[debug][0m [phantom] Navigation requested: url=http://www.monsieurdrive.com/checkout/steps, type=LinkClicked, willNavigate=true, isMainFrame=true
+====================================
+STEP 6 launch checkout commander btn
+====================================
+[32;1m[debug][0m [phantom] Capturing page to /Users/ju/CODE/PLAYGROUND/casper_test/step6_launch_checkout_commander_btn.png
+[36m[info][0m [phantom] Capture saved to /Users/ju/CODE/PLAYGROUND/casper_test/step6_launch_checkout_commander_btn.png
+[36m[info][0m [phantom] Step success 17/20: done in 20331ms.
+[32;1m[debug][0m [phantom] Navigation requested: url=http://www.monsieurdrive.com/checkout/steps/new_credentials, type=LinkClicked, willNavigate=true, isMainFrame=true
+[32;1m[debug][0m [phantom] url changed to "http://www.monsieurdrive.com/checkout/steps/new_credentials"
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Successfully injected Casper client-side utilities
+[36m[info][0m [phantom] Step anonymous 18/20 http://www.monsieurdrive.com/checkout/steps/new_credentials (HTTP 200)
+[36m[info][0m [phantom] Step anonymous 18/20: done in 22115ms.
+[36m[info][0m [phantom] Step _step 19/21 http://www.monsieurdrive.com/checkout/steps/new_credentials (HTTP 200)
+[36m[info][0m [phantom] Step _step 19/21: done in 22143ms.
+[36m[info][0m [phantom] waitFor() finished in 40ms.
+[36m[info][0m [phantom] Step success 20/22 http://www.monsieurdrive.com/checkout/steps/new_credentials (HTTP 200)
+[32;1m[debug][0m [phantom] Mouse event 'mousedown' on selector: .account_btn 
+[32;1m[debug][0m [phantom] Mouse event 'mouseup' on selector: .account_btn 
+[32;1m[debug][0m [phantom] Mouse event 'click' on selector: .account_btn 
+====================================
+STEP 7 transfert cart
+====================================
+[32;1m[debug][0m [phantom] Capturing page to /Users/ju/CODE/PLAYGROUND/casper_test/step7_transfert_cart.png
+[36m[info][0m [phantom] Capture saved to /Users/ju/CODE/PLAYGROUND/casper_test/step7_transfert_cart.png
+[36m[info][0m [phantom] Step success 20/22: done in 22533ms.
+[36m[info][0m [phantom] Step anonymous 21/22 http://www.monsieurdrive.com/checkout/steps/new_credentials (HTTP 200)
+[36m[info][0m [phantom] Step anonymous 21/22: done in 22536ms.
+[36m[info][0m [phantom] Step _step 22/23 http://www.monsieurdrive.com/checkout/steps/new_credentials (HTTP 200)
+[36m[info][0m [phantom] Step _step 22/23: done in 22561ms.
+[32;1m[debug][0m [phantom] Navigation requested: url=http://dis.eu.criteo.com/dis/dis.aspx?p=16216&cb=86513752489&ref=http://www.monsieurdrive.com/cart&sc_r=1920x1080&sc_d=32, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=https://courses.carrefour.fr/drive/profil/compte.accountheader.logout?, type=FormSubmitted, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=https://courses.carrefour.fr/drive/profil/authentification/$002fdrive$002fprofil$002fcompte.accountheader.logout;jsessionid=F0A17F187EA4CCD4CC908BA00EB5861F.B1D270A3A4FE6CBCB7D37EBCE6916B, type=FormSubmitted, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=http://courses.carrefour.fr/drive/accueil.body.overlayers.storeoverlayer.drivepicking/112?, type=FormSubmitted, willNavigate=true, isMainFrame=false
+[33m[warning][0m [phantom] Loading resource failed with status=fail (HTTP 200): http://www.monsieurdrive.com/checkout/steps/new_credentials
+[32;1m[debug][0m [phantom] Navigation requested: url=http://courses.carrefour.fr/drive/accueil, type=FormSubmitted, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=http://courses.carrefour.fr/drive/accueil.body.overlayers.cartoverlayer.removeallminicart, type=FormSubmitted, willNavigate=true, isMainFrame=false
+[33m[warning][0m [phantom] Loading resource failed with status=fail (HTTP 200): http://www.monsieurdrive.com/checkout/steps/new_credentials
+[32;1m[debug][0m [phantom] Navigation requested: url=http://courses.carrefour.fr/drive/accueil, type=FormSubmitted, willNavigate=true, isMainFrame=false
+[32;1m[debug][0m [phantom] Navigation requested: url=http://courses.carrefour.fr/drive/rayon.categoryproductlistcontainer.thumbnaillist.thumbnailproductcontainer.productcomponent.addproductform?t:ac=153109, type=FormSubmitted, willNavigate=true, isMainFrame=false
+[33m[warning][0m [phantom] Loading resource failed with status=fail (HTTP 200): http://www.monsieurdrive.com/checkout/steps/new_credentials
+[32;1m[debug][0m [phantom] Navigation requested: url=http://courses.carrefour.fr/drive/tous-les-rayons/marche/le-boucher/PID0/153109, type=FormSubmitted, willNavigate=true, isMainFrame=false
+[36m[info][0m [phantom] waitFor() finished in 20416ms.
+[36m[info][0m [phantom] Step success 23/24 http://www.monsieurdrive.com/checkout/steps/new_credentials (HTTP 200)
+[32;1m[debug][0m [phantom] Mouse event 'mousedown' on selector: .js-checkout_tranfer_btn
+[32;1m[debug][0m [phantom] Mouse event 'mouseup' on selector: .js-checkout_tranfer_btn
+[32;1m[debug][0m [phantom] Mouse event 'click' on selector: .js-checkout_tranfer_btn
+[32;1m[debug][0m [phantom] Navigation requested: url=http://courses.carrefour.fr/drive/commander/panier/slotbox, type=LinkClicked, willNavigate=true, isMainFrame=false
+====================================
+STEP 8 checkout finish
+====================================
+[32;1m[debug][0m [phantom] Capturing page to /Users/ju/CODE/PLAYGROUND/casper_test/step8_checkout_finish.png
+[36m[info][0m [phantom] Capture saved to /Users/ju/CODE/PLAYGROUND/casper_test/step8_checkout_finish.png
+[36m[info][0m [phantom] Step success 23/24: done in 43451ms.
+[36m[info][0m [phantom] Step anonymous 24/24 http://www.monsieurdrive.com/checkout/steps/new_credentials (HTTP 200)
+[36m[info][0m [phantom] Step anonymous 24/24: done in 43480ms.
+[36m[info][0m [phantom] Step _step 25/28 http://www.monsieurdrive.com/checkout/steps/new_credentials (HTTP 200)
+[36m[info][0m [phantom] Step _step 25/28: done in 43484ms.
+[36m[info][0m [phantom] waitFor() finished in 1120ms.
+[36m[info][0m [phantom] Step anonymous 26/29 http://www.monsieurdrive.com/checkout/steps/new_credentials (HTTP 200)
+====================================
+STEP 9 merchant shop
+====================================
+[32;1m[debug][0m [phantom] Capturing page to /Users/ju/CODE/PLAYGROUND/casper_test/step9_merchant_shop.png
+[36m[info][0m [phantom] Capture saved to /Users/ju/CODE/PLAYGROUND/casper_test/step9_merchant_shop.png
+[36m[info][0m [phantom] Step anonymous 26/29: done in 44864ms.
+[36m[info][0m [phantom] Step _step 27/29 http://www.monsieurdrive.com/checkout/steps/new_credentials (HTTP 200)
+[36m[info][0m [phantom] Step _step 27/29: done in 44875ms.
+[32;1m[debug][0m [phantom] Successfully injected Casper client-side utilities
+[36m[info][0m [phantom] Step anonymous 28/29 http://courses.carrefour.fr/drive/commander/panier/slotbox (HTTP 200)
+====================================
+STEP 10 display shop merchant
+====================================
+[32;1m[debug][0m [phantom] Capturing page to /Users/ju/CODE/PLAYGROUND/casper_test/step10_display_shop_merchant.png
+[36m[info][0m [phantom] Capture saved to /Users/ju/CODE/PLAYGROUND/casper_test/step10_display_shop_merchant.png
+[36m[info][0m [phantom] Step anonymous 28/29: done in 45469ms.
+[36m[info][0m [phantom] Step _step 29/30 http://courses.carrefour.fr/drive/commander/panier/slotbox (HTTP 200)
+[36m[info][0m [phantom] Step _step 29/30: done in 45477ms.
+[36m[info][0m [phantom] wait() finished waiting for 1000ms.
+====================================
+STEP 11 display shop merchant
+====================================
+[32;1m[debug][0m [phantom] Capturing page to /Users/ju/CODE/PLAYGROUND/casper_test/step11_display_shop_merchant.png
+[36m[info][0m [phantom] Capture saved to /Users/ju/CODE/PLAYGROUND/casper_test/step11_display_shop_merchant.png
+[36m[info][0m [phantom] Step _step 30/30 http://courses.carrefour.fr/drive/commander/panier/slotbox (HTTP 200)
+[36m[info][0m [phantom] Step _step 30/30: done in 46851ms.
+[36m[info][0m [phantom] Done 30 steps in 46869ms
+Unsafe JavaScript attempt to access frame with URL about:blank from frame with URL file:///usr/local/Cellar/casperjs/1.1-beta3/libexec/bin/bootstrap.js. Domains, protocols and ports must match.
+
+Unsafe JavaScript attempt to access frame with URL about:blank from frame with URL file:///usr/local/Cellar/casperjs/1.1-beta3/libexec/bin/bootstrap.js. Domains, protocols and ports must match.
+
+Unsafe JavaScript attempt to access frame with URL about:blank from frame with URL file:///usr/local/Cellar/casperjs/1.1-beta3/libexec/bin/bootstrap.js. Domains, protocols and ports must match.
+
