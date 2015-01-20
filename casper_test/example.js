@@ -45,7 +45,7 @@ casper.then(function(){
 casper.then(function() {
   casper.waitForSelector('.addtocart', function success() {
     log_step("add a product to the cart");
-    casper.click('.addtocart[data-product-id="521d2472b30f7cad8032fdc0"]');
+    casper.click('.addtocart[data-product-id="521d2476b30f7cad80330350"]');
   });
 });
 
@@ -90,5 +90,8 @@ casper.then(function(){
     });
   });
 });
-
-casper.run();
+// casper.run();
+casper.run(function() {
+    require('utils').dump(this.logs);
+    this.exit();
+});
