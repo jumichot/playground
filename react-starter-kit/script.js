@@ -23,8 +23,36 @@ var Photo = React.createClass({
           <span>{this.props.caption}</span>
         </div>
       </div>
-      )
+      );
   }
 });
 
-React.render(<Photo imageUrl="http://media.mediatemple.netdna-cdn.com/wp-content/uploads/2014/10/sidebar-ppk-1.png" caption="my caption" />, document.body);
+var PhotoGallery = React.createClass({
+  getDataFromServer: function(){
+    return [{
+      url: 'http://tinyurl.com/lkevsb9',
+      caption: 'New York!'
+    },
+    {
+      url: 'http://tinyurl.com/mxkwh56',
+      caption: 'Cows'
+    },
+    {
+      url: 'http://tinyurl.com/nc7jv28',
+      caption: 'Scooters'
+    }];
+  },
+  render: function(){
+    var data = this.getDataFromServer();
+    var photos = data.map(function(photo){
+      return <Photo src={photo.url} caption={photo.caption} />
+    });
+    return(
+      <div className="photo-gallery">
+        {photos}
+      </div>
+    );
+  }
+});
+
+React.render(<PhotoGallery />, document.body);
