@@ -1,58 +1,47 @@
-var Photo = React.createClass({
-
-  getInitialState: function(){
-    // here return a object
-    return { liked: false }
-  },
-
-  toggleLiked: function(){
-    this.setState({liked: !this.state.liked});
-  },
-
+var Comment = React.createClass({
   render: function(){
-    var buttonClass = this.state.liked ? 'active' : '';
-
     return (
-      <div className='photo'>
-        <img src={this.props.src} />
-
-        <div className='bar'>
-          <button onClick={this.toggleLiked} className={buttonClass}>
-            ♥
-          </button>
-          <span>{this.props.caption}</span>
-        </div>
+      <div className="comment">
+        <h2 className="commentAuthor">
+          {this.props.author}
+        </h2>
+        {this.props.children}
       </div>
       );
   }
 });
 
-var PhotoGallery = React.createClass({
-  getDataFromServer: function(){
-    return [{
-      url: 'http://tinyurl.com/lkevsb9',
-      caption: 'New York!'
-    },
-    {
-      url: 'http://tinyurl.com/mxkwh56',
-      caption: 'Cows'
-    },
-    {
-      url: 'http://tinyurl.com/nc7jv28',
-      caption: 'Scooters'
-    }];
-  },
+var CommentForm = React.createClass({
   render: function(){
-    var data = this.getDataFromServer();
-    var photos = data.map(function(photo){
-      return <Photo src={photo.url} caption={photo.caption} />
-    });
-    return(
-      <div className="photo-gallery">
-        {photos}
+    return (
+      <div className="commentForm">
+        Hello I'm the commentForm
+      </div>
+      );
+  }
+});
+
+var CommentList = React.createClass({
+  render: function(){
+    return (
+      <div className="commentList">
+        <Comment author="Pete Hunt">This is one comment</Comment>
+        <Comment author="Jordan Walke">This is *another* comment</Comment>
       </div>
     );
   }
 });
 
-React.render(<PhotoGallery />, document.body);
+var CommentBox = React.createClass({
+  render: function() {
+    return (
+      <div className="commentBox">
+        <h1>Comments </h1>
+        <CommentList />
+        <CommentForm />
+      </div>
+    );
+  }
+});
+
+React.render(<CommentBox />, document.body);
