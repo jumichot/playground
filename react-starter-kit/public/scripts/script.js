@@ -21,10 +21,26 @@ var Comment = React.createClass({
 });
 
 var CommentForm = React.createClass({
+  handleSubmit: function(e){
+    e.preventDefault();
+    var author = this.refs.author.getDOMNode().value.trim();
+    var text = this.refs.text.getDOMNode().value.trim();
+    if (!text || !author) {
+      return;
+    }
+    // TODO: send request to the server
+    this.refs.author.getDOMNode().value = '';
+    this.refs.text.getDOMNode().value = '';
+    return;
+  },
   render: function(){
     return (
       <div className="commentForm">
-        Hello I'm the commentForm
+        <form className="commentForm" onSubmit={this.handleSubmit}>
+          <input type="text" placeholder="Your name" ref="author" />
+          <input type="text" placeholder="Say something..." ref="text" />
+          <input type="submit" value="Post" />
+        </form>
       </div>
       );
   }
@@ -44,15 +60,34 @@ var CommentList = React.createClass({
 });
 
 var CommentBox = React.createClass({
+  getInitialState: function(){
+    return ({data: []});
+  },
+  loadCommentsFromServer: function() {
+    $.ajax({
+      url: this.props.url,
+      dataType: 'json',
+      success: function(data) {
+        this.setState({data: data});
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error(this.props.url, status, err.toString());
+      }.bind(this)
+    });
+  },
+  componentDidMount: function() {
+    this.loadCommentsFromServer();
+    setInterval(this.loadCommentsFromServer, this.props.pollInterval);
+  },
   render: function() {
     return (
       <div className="commentBox">
-        <h1>Comments </h1>
-        <CommentList data={this.props.data} />
+        <h1>Comments</h1>
+        <CommentList data={this.state.data} />
         <CommentForm />
       </div>
     );
   }
 });
 
-React.render(<CommentBox data={data} />, document.body);
+React.render(<CommentBox url="comments.json" pollInterval={5000} />, document.body);
