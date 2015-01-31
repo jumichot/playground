@@ -1,3 +1,4 @@
+// http://facebook.github.io/react/docs/tutorial.html
 var converter = new Showdown.converter();
 var data = [
   {author: "Pete Hunt", text: "This is one comment"},

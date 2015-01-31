@@ -1,3 +1,4 @@
+// http://www.jackcallister.com/2015/01/05/the-react-quick-start-guide.html
 var Photo = React.createClass({
 
   getInitialState: function(){
