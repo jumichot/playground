@@ -17,18 +17,16 @@ var ActivityBox = React.createClass({
 });
 
 var ListActivities = React.createClass({
-  toto: function(e){
-    alert("yo");
+  displayRightDetail: function(e){
     e.preventDefault();
     console.log(e);
-    console.log("yo");
   },
   render: function() {
     var activityNodes = this.props.activities.map(function(activity, i){
       return (
-        <ActivityLink onSomeEvent={this.toto} activity={activity} />
+        <ActivityLink onActivityCliked={this.displayRightDetail} activity={activity} />
         );
-    });
+    }.bind(this));
     return (
       <ul>
         {activityNodes}
@@ -38,14 +36,10 @@ var ListActivities = React.createClass({
 });
 
 var ActivityLink = React.createClass({
-  activityCliked: function (e) {
-    e.preventDefault();
-    console.log(e);
-  },
   render: function() {
     return(
-      <li><a href="" onClick={this.activityCliked}>{this.props.activity.startTime}</a></li>
-      );
+      <li><a href="" onClick={this.props.onActivityCliked}>{this.props.activity.startTime}</a></li>
+    );
   }
 });
 
