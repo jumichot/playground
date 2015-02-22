@@ -1,16 +1,16 @@
 var http =  require('http');
-var bl = require('bl')
+var bl = require('bl');
 
 var url1 = process.argv[2];
 var url2 = process.argv[3];
 var url3 = process.argv[4];
 
 
-var output =[]
+var output =[];
 
 
 var printResult = function(data){
-  output.push(data)
+  output.push(data);
   if(output.length === 3){
     console.log(output[2]);
     console.log(output[0]);
@@ -22,11 +22,13 @@ var getHttp = function(url){
   http.get(url, function(response){
     var txt;
     response.setEncoding('utf8');
-    response.on('error', console.error)
-    response.pipe(bl(function (err, data) { txt = data.toString() }))
-    response.on('end', function(arg) {printResult(txt);})
+    response.on('error', console.error);
+    response.pipe(bl(function (err, data) {
+      txt = data.toString();
+    }));
+    response.on('end', function(arg) {printResult(txt);});
   });
-}
+};
 
 getHttp(url1);
 getHttp(url2);
