@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+      input[type="range"] {
+          position: relative;
+          margin-left: 1em;
+      }
+      input[type="range"]:after,
+      input[type="range"]:before {
+          position: absolute;
+          top: 1em;
+          color: #aaa;
+      }
+      input[type="range"]:before {
+          left:0em;
+          content: attr(min);
+      }
+      input[type="range"]:after {
+          right: 0em;
+          content: attr(max);
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <form action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+    <label>pan :</label>
+    <input type="range" id="x" name="x"  max="180" min="0" step="5"> <br><br>
+    <label>tilt :</label>
+    <input type="range" id="y" name="y"  max="180" min="0" step="5">
+    <input type="checkbox">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      var socket = io();
+      $('form').submit(function(){
+        socket.emit('msg', $('#m').val());
+        $('#m').val('');
+        return false;
+      });
+      socket.on('x', function(msg){
+        $('#x').val(msg);
+      });
+      socket.on('y', function(msg){
+        $('#y').val(msg);
+      });
+
+      $("#x").on('input',function(){
+        var val=$(this).val();
+        socket.emit('x',val);
+      });
+      $("#y").on('input',function(){
+        var val=$(this).val();
+        socket.emit('y',val);
+      });
+    </script>
+  </body>
+</html>
