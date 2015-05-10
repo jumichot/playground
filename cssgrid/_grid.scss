@@ -1,0 +1,40 @@
+$columns: 12 !default;
+$gutter: 20px !default;
+
+.grid {
+  overflow: auto;
+}
+
+%col {
+  float: left;
+  min-height: 1px;
+  position: relative;
+  border: 1px solid rgba(#000, 0.5);
+  padding:0 $gutter*0.5;
+}
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    @extend %col;
+    width: $i / $columns * 100%;
+  }
+  .col-m-#{$i}, .col-l-#{$i} {
+    @extend %col;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  @for $i from 1 through $columns {
+    .col-m-#{$i} {
+      width: $i / $columns * 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  @for $i from 1 through $columns {
+    .col-l-#{$i} {
+      width: $i / $columns * 100%;
+    }
+  }
+}
