@@ -1,3 +1,7 @@
+# http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/113789
+# http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/113781
+# https://www.schneier.com/solitaire.html
+
 class Cipher
   def initialize(input)
     @input = input
